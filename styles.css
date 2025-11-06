@@ -1,0 +1,153 @@
+body {
+  margin: 0;
+  font-family: 'Playfair Display', serif;
+  background-color: #f4d6d0;
+  position: relative;
+  min-height: 100vh;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('dekorart.jpg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 500px auto;
+  opacity: 0.1;
+  z-index: -1;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  background-color: #f2d1c8;
+  border-radius: 10px;
+  border: 1px solid #e0bfb6;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px 30px;
+  z-index: 1;
+  max-width: 700px;
+  width: 100%;
+  gap: 30px;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+}
+
+.left-image {
+  flex: 0 0 180px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-image {
+  width: 160px;
+  height: auto;
+  border-radius: 10px;
+}
+
+.right-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  flex: 1;
+}
+
+.social-button {
+  display: inline-flex;
+  align-items: center;
+  background-color: #fff8f6;
+  border: 1px solid #d7b5aa;
+  color: #663f35;
+  padding: 10px 16px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s ease;
+  width: 140px;
+  justify-content: flex-start;
+}
+
+.social-button:hover {
+  background-color: #f1dbd6;
+}
+
+.icon {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  margin-right: 10px;
+  object-fit: cover;
+}
+
+.location {
+  font-size: 1rem;
+  color: #663f35;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 140px;
+  margin-top: 8px;
+}
+
+.location .icon {
+  width: 14px;
+  height: 14px;
+  margin-right: 5px;
+  border-radius: 50%;
+}
+
+/* Mobilna verzija */
+@media (max-width: 768px) {
+  .content {
+    gap: 20px;
+    padding: 15px 20px;
+  }
+
+  .left-image {
+    flex: 0 0 140px;
+  }
+
+  .main-image {
+    width: 130px;
+  }
+
+  .social-button,
+  .location {
+    width: 130px;
+    font-size: 0.9rem;
+    padding: 8px 12px;
+  }
+
+  .icon {
+    width: 16px;
+    height: 16px;
+    margin-right: 8px;
+  }
+
+  .location .icon {
+    width: 13px;
+    height: 13px;
+    margin-right: 5px;
+  }
+
+  body::before {
+    background-size: 300px auto;
+  }
+}
